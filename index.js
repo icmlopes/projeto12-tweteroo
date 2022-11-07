@@ -10,10 +10,6 @@ const userInfo = []
 
 app.post("/sign-up", (req, res) => {
     console.log(req.body)
-    //const newUser = {
-      //  username: req.body.username,
-        //avatar: req.body.avatar
-    //}
 
     const newUser = req.body
     userInfo.push(newUser)
@@ -28,11 +24,10 @@ app.post("/tweets", (req, res) => {
     const newTweet = {
         username: req.body.username,
         tweet: req.body.tweet,
-        avatar: userPic
+        avatar: userPic.avatar
     }
 
     tweets.push(newTweet)
-    //res.send("OK")
     res.status(201).send("OK")
 })
 
